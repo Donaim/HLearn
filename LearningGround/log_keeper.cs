@@ -222,10 +222,10 @@ namespace LearningGround
         }
         static string getOutputFile(string targetdir, string cardSetPath, string EndName, StdSerializers.ISerializer ser)
         {
-            string dir = $"{targetdir}\\{Path.GetFileName(cardSetPath)}\\{ser.Name}-{ser.InputLength}\\";
+            string dir = Path.Combine(targetdir, Path.GetFileName(cardSetPath), $"{ser.Name}-{ser.InputLength}{Path.DirectorySeparatorChar}");
             if (!Directory.Exists(dir)) { Directory.CreateDirectory(dir); }
 
-            string file = dir + $"log-{EndName}";
+            string file = Path.Combine(dir, $"log-{EndName}");
             return file;
         }
 
