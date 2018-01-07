@@ -119,7 +119,10 @@ namespace GameRunner
 		}
 
 		public static GameData LoadFromAssembly(string filepath)
-		{
+		{   
+            Console.WriteLine($"Loading assembly: \"{filepath}\"");
+            // System.Threading.Thread.Sleep(-1);
+
 			var re = new GameDataCollector();
 
 			var ass = Assembly.UnsafeLoadFrom(filepath);

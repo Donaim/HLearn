@@ -15,7 +15,7 @@ namespace NeuralFun
         public const string StdDir = @"/home/d0naim/tmp/hlearning/";
         public const string StdCardset
             //= @"E:\OneDrive\Documents\Programing\C#\Projects\HearthstoneLearning\card_sets\primitive\bin\Release\primitive.dll";
-            = @"/home/d0naim/dev/HearthstoneLearning/card_sets/reaset/bin/Release/realset.dll";
+            = @"/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/realset.dll";
         public const string StdSerializerName =
             //nameof(StdSerializers.AllOneHotSerial);
             nameof(StdSerializers.SingleIndexingSerial);

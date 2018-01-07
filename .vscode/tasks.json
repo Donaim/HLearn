@@ -20,11 +20,43 @@
             "problemMatcher": "$msCompile"
         },
         {
-            "label": "runDebug",
+            "label": "brunDebug",
+            "dependsOn": "buildDebug",
             "type": "shell",
             "command": "mono",
             "args": [
                 "NeuralFun/bin/Debug/NeuralFun.exe"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "focus": true
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "buildRelease",
+            "type": "shell",
+            "command": "msbuild",
+            "args": [
+                "/property:GenerateFullPaths=true",
+                "/verbosity:minimal",
+                "/property:Configuration=Release",
+                "/t:build"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "focus": true
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "runRelease",
+            "type": "shell",
+            "command": "mono",
+            "args": [
+                "NeuralFun/bin/Release/NeuralFun.exe"
             ],
             "group": "build",
             "presentation": {
