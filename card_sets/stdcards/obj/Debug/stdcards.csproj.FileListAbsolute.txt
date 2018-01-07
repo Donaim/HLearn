@@ -1,0 +1,9 @@
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/bin/Debug/stdcards.dll.config
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/bin/Debug/stdcards.dll
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/bin/Debug/stdcards.pdb
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/bin/Debug/GameEngine.dll
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/bin/Debug/GameEngine.pdb
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/bin/Debug/GameEngine.dll.config
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/obj/Debug/stdcards.csproj.CoreCompileInputs.cache
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/obj/Debug/stdcards.dll
+/home/d0naim/dev/HearthstoneLearning/card_sets/stdcards/obj/Debug/stdcards.pdb

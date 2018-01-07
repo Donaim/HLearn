@@ -1,0 +1,22 @@
+
+# CSHARP
+*.dll
+*.exe
+*.dll.config
+*.exe.config
+*.pdb
+*.xml
+
+*/obj/*
+
+
+# C++
+*.o
+*.a
+
+# EVERYTHING
+**ignore.*
+
+# IMPORTANT
+!**/ref/*
+!**/important.*/*

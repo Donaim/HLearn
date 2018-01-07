@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F56A5BC5-2880-4849-AE45-0DF12236E851}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LearningGround</RootNamespace>
+    <AssemblyName>LearningGround</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;sdebug</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="VNNAddOn">
+      <HintPath>..\ref\VNNAddOn.dll</HintPath>
+    </Reference>
+    <Reference Include="VNNLib">
+      <HintPath>..\ref\VNNLib.dll</HintPath>
+    </Reference>
+    <Reference Include="vutils">
+      <HintPath>..\ref\vutils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="virtualSimulator.cs" />
+    <Compile Include="log_keeper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="aiPlayers.cs" />
+    <Compile Include="random_vs_neuro-core.cs" />
+    <Compile Include="visualRandom.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameEngine\GameEngine.csproj">
+      <Project>{9e613793-02bf-4416-8003-e65566ce402e}</Project>
+      <Name>GameEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameRunner\GameRunner.csproj">
+      <Project>{3492602d-4e8c-45cf-bb3f-bbd3cd6d9e33}</Project>
+      <Name>GameRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameVisualizer\GameVisualizer.csproj">
+      <Project>{067d4a7d-a437-4f87-926f-b4611dc5500d}</Project>
+      <Name>GameVisualizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StdSerializers\StdSerializers.csproj">
+      <Project>{364689f5-e37c-4c63-b76d-d7a93069dc6d}</Project>
+      <Name>StdSerializers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

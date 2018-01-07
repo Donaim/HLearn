@@ -1,0 +1,9 @@
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/realset.dll.config
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/realset.dll
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/realset.pdb
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/GameEngine.dll
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/GameEngine.pdb
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/GameEngine.dll.config
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/obj/Debug/realset.csproj.CoreCompileInputs.cache
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/obj/Debug/realset.dll
+/home/d0naim/dev/HearthstoneLearning/card_sets/realset/obj/Debug/realset.pdb
