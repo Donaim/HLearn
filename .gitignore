@@ -6,8 +6,12 @@
 *.exe.config
 *.pdb
 *.xml
+*.cache
+*.ide
+*.suo
 
-**/obj/*
+**/obj/**
+.vs
 
 
 # C++
