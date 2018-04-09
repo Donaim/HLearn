@@ -12,10 +12,12 @@ namespace NeuralFun
 {
 	class root
 	{
-        public const string StdDir = @"/home/d0naim/tmp/hlearning/";
+        public const string StdDir
+            //= @"/home/d0naim/tmp/hlearning/";
+            = @"C:\\Users\\d0naim\\Desktop\\hlearning\\";
         public const string StdCardset
             //= @"E:\OneDrive\Documents\Programing\C#\Projects\HearthstoneLearning\card_sets\primitive\bin\Release\primitive.dll";
-            = @"/home/d0naim/dev/HearthstoneLearning/card_sets/realset/bin/Release/realset.dll";
+            = @"card_sets/realset/bin/Release/realset.dll";
         public const string StdSerializerName =
             //nameof(StdSerializers.AllOneHotSerial);
             nameof(StdSerializers.SingleIndexingSerial);

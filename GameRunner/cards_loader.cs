@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Reflection;
+using System.IO;
 
 using GameEngine;
 
@@ -37,6 +38,7 @@ namespace GameRunner
     }
     internal sealed class GameDataCollector
 	{
+
 		public readonly List<Type> 
 			Spells = new List<Type>(), 
 			Minions = new List<Type>(), 
@@ -98,7 +100,14 @@ namespace GameRunner
 
 	public static class CardsLoader
 	{
-		static void print_ids(GameDataCollector re)
+        static readonly string ROOTDIR;
+        static CardsLoader()
+        {
+            ROOTDIR = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            while (ROOTDIR.Contains(Path.DirectorySeparatorChar) && Path.GetFileName(ROOTDIR).ToLower().Trim(Path.DirectorySeparatorChar, ' ') != "hearthstonelearning")
+            { ROOTDIR = ROOTDIR.Remove(ROOTDIR.LastIndexOf(Path.DirectorySeparatorChar)); }
+        }
+        static void print_ids(GameDataCollector re)
 		{
 			Console.WriteLine("Modificators:");
 			foreach (var m in re.Modificators) { line(m); }
@@ -120,6 +129,14 @@ namespace GameRunner
 
 		public static GameData LoadFromAssembly(string filepath)
 		{   
+            if (!File.Exists(filepath))
+            {
+                filepath = Path.Combine(ROOTDIR, filepath);
+                if (!File.Exists(filepath))
+                {
+                    throw new Exception($"File {filepath} does not exist!");
+                }
+            }
             Console.WriteLine($"Loading assembly: \"{filepath}\"");
             // System.Threading.Thread.Sleep(-1);
 
