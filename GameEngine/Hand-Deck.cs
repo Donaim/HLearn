@@ -55,14 +55,13 @@ namespace GameEngine
 			public override int ID { get => id; }
 			public Fatigue(Player p, int fatigue) : base(p) { FatigueCounter = fatigue; }
 
-			public int FatigueCounter = 0;
+			public readonly int FatigueCounter = 0;
 			public override int Cost => FatigueCounter; 
 
 			public override void OnDraw()
 			{
-				FatigueCounter++;
 				Parent.Hero.RecieveDamage(this, FatigueCounter);
-                if (this.CanPlay(out var pl)) { pl(); }
+                //if (this.CanPlay(out var pl)) { pl(); }
 			}
 
             static void empty() { }

@@ -94,6 +94,8 @@ namespace NeuralFun
 		public int len;
 		public static void open(string data_file, out FileStream stream, out int len, out vnn net, out string nnfile, out string dir, out string file)
 		{
+            data_file = data_file.Replace("\"", string.Empty);
+
 			if (File.Exists(data_file)) { dir = Path.GetDirectoryName(data_file) + Path.DirectorySeparatorChar; file = Path.GetFileName(data_file); }
 			else { dir = root.StdDir; file = data_file; }
 
